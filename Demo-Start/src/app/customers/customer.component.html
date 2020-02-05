@@ -16,8 +16,11 @@
                  id="firstNameId"
                  type="text"
                  placeholder="First Name (required)"
-                  formControlName="firstName"
+                 formControlName="firstName"
                  name="firstName"
+                 [ngClass]="{'is-invalid': (customerForm.get('firstName').touched ||
+                                            customerForm.get('firstName').dirty) &&
+                                            !customerForm.get('firstName').valid}"
                  />
           <span class="invalid-feedback">
             <span >
@@ -40,6 +43,7 @@
                  placeholder="Last Name (required)"
                  name="lastName"
                  formControlName="lastName"
+                 [ngClass]="{'is-invalid': (customerForm.get('lastName').touched || customerForm.get('lastName').dirty && !customerForm.get('lastName').valid )}"
             />
           <span class="invalid-feedback">
             <span >
@@ -60,8 +64,9 @@
                  id="emailId"
                  type="email"
                  placeholder="Email (required)"
-                  formControlName="email"
+                 formControlName="email"
                  name="email"
+                 [ngClass]="{'is-invalid': (customerForm.get('email').touched || customerForm.get('email').dirty && !customerForm.get('email').valid)}"
                  />
           <span class="invalid-feedback">
             <span >
