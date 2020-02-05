@@ -16,7 +16,7 @@
                  id="firstNameId"
                  type="text"
                  placeholder="First Name (required)"
-
+                  formControlName="firstName"
                  name="firstName"
                  />
           <span class="invalid-feedback">
@@ -39,6 +39,7 @@
                  type="text"
                  placeholder="Last Name (required)"
                  name="lastName"
+                 formControlName="lastName"
             />
           <span class="invalid-feedback">
             <span >
@@ -59,7 +60,7 @@
                  id="emailId"
                  type="email"
                  placeholder="Email (required)"
-
+                  formControlName="email"
                  name="email"
                  />
           <span class="invalid-feedback">
@@ -80,6 +81,7 @@
               <input class="form-check-input"
                      id="sendCatalogId"
                      type="checkbox"
+                     formControlName="sendCatalog"
                      name="sendCatalog"> Send me your catalog
             </label>
           </div>
