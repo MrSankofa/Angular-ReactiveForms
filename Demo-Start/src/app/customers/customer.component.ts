@@ -17,7 +17,7 @@ export class CustomerComponent implements OnInit {
   ngOnInit() {
     this.customerForm = this.formBuilder.group({
       firstName: ['', Validators.required],
-      lastName: ['', Validators.required],
+      lastName: [{value: 'n/a', disabled: true}, Validators.required],
       email: ['', Validators.required],
       sendCatalog: true
     });
